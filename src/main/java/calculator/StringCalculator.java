@@ -9,3 +9,13 @@ public class StringCalculator {
         }
         return stringToInt(input);
     }
+private int getSum(String[] numbers) {
+        int sum = 0;
+        for (String currentNumber:numbers) {
+            if (stringToInt(currentNumber) > 1000) {
+                continue;
+            }
+            sum += stringToInt(currentNumber);
+        }
+        return sum;
+    }
